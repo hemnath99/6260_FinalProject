@@ -29,6 +29,12 @@ body
 	
 }
 
-
+.home
+{
+ 		background-image:url("hms.png");
+ 		background-repeat: no-repeat;    
+		background-size:cover;
+				
+}
 
 
