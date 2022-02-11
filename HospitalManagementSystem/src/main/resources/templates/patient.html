@@ -39,7 +39,9 @@
 			   <div class="card">
 			  
 			  <form action="/next" method="post" >
-			   <div class="col-md-2">
+			  <div class="row">
+			  
+			   <div class="col-md-1">
 			    <label for="validationServer03" class="form-label">Room No</label>
 			    <input type="text" name="RoomNo" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
@@ -47,7 +49,7 @@
 			    </div>
 			    </div>
 			  
-			  <div class="col-md-5">
+			  <div class="col-md-4">
 			    <label for="validationServer03" class="form-label">Name</label>
 			    <input type="text" name="patientName" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required placeholder="Patient Name">
 			    <div id="validationServer03Feedback" class="invalid-feedback">
@@ -55,7 +57,7 @@
 			    </div>
 			  </div>
 			  
-			   <div class="col-md-2">
+			   <div class="col-md-1">
 			    <label for="validationServer03" class="form-label">Age</label>
 			    <input type="text" name="patientAge" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
@@ -73,23 +75,15 @@
 			    </select>
 			  </div>
 			  
-			   <div class="col-md-5">
+			   <div class="col-md-3">
 			    <label for="validationServer03" class="form-label">contact</label>
 			    <input type="text" name="patientContact" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
 			     Mandatory field.
 			    </div>
+			    
 			  </div>
-			
-			 <div class="col-md-10">
-			    <label for="validationServer03" class="form-label">Address</label>
-			    <input type="text" name="patientAddress" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
-			    <div id="validationServer03Feedback" class="invalid-feedback">
-			     Mandatory field.
-			    </div>
-			  </div>
-			  
-			   <div class="col-md-5">
+			     <div class="col-md-3">
 			    <label for="validationServer03" class="form-label">Admit Date</label>
 			    <input type="text" name="admit_date" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
@@ -97,7 +91,8 @@
 			    </div>
 			  </div>
 			  
-			   <div class="col-md-5">
+			  
+			   <div class="col-md-3">
 			    <label for="validationServer03" class="form-label">Discharge Date</label>
 			    <input type="text" name="discharge_date" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
@@ -105,7 +100,7 @@
 			    </div>
 			  </div>
 		  	
-		  	 <div class="col-md-5">
+		  	 <div class="col-md-3">
 			    <label for="validationServer03" class="form-label">Patient Problem</label>
 			    <input type="text" name="patient_problem" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
@@ -113,7 +108,17 @@
 			    </div>
 			  </div>
   
-			 <div class="col-md-5">
+			
+			 <div class="col-md-10">
+			    <label for="validationServer03" class="form-label">Address</label>
+			    <input type="text" name="patientAddress" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+			    <div id="validationServer03Feedback" class="invalid-feedback">
+			     Mandatory field.
+			    </div>
+			  </div>  
+			
+			  
+			 <div class="col-md-3">
 			
 			    <label for="report"> Report </label>
 			    <select class="form-control" name="patient_report" id="exampleFormControlSelect1">
@@ -132,14 +137,13 @@
 			      <label class="form-check-label" for="invalidCheck3">
 			        Confirm
 			      </label>
-			      <div class="invalid-feedback">
-			        You must agree before submitting.
-			      </div>
+			     
 			    </div>
 			  </div>
 			  
 			   <div class="col-md-12 text-center">
 			  <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+			   </div>
 			   </div>
 			  </form>
 			  </div>

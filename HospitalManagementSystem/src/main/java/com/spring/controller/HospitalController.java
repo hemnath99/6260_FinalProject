@@ -1,14 +1,16 @@
 package com.spring.controller;
+import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import com.spring.Entity.AdminEntity;
 import com.spring.Entity.DoctorEntity;
 import com.spring.Entity.PatientEntity;
 import com.spring.Entity.StaffEntity;
+import com.spring.service.AdminService;
 import com.spring.service.DoctorService;
 import com.spring.service.PatientService;
 import com.spring.service.StaffService;
@@ -23,7 +25,15 @@ public class HospitalController
 	private StaffService staffService;
 	@Autowired
 	private DoctorService doctorService;
+	 @Autowired
+	  private AdminService adminService;
 			
+	
+	@GetMapping("/login")
+	private String login() {
+		return"login";
+	}
+	
 		@GetMapping("/home")
 		private String display1() {
 			return"home";
@@ -86,4 +96,20 @@ public class HospitalController
 			return"home2";
 			
 		}
+	
+		@PostMapping("/adminLoginCheck")
+		public String login(@ModelAttribute AdminEntity adminEntity)
+		 {	
+			  AdminEntity admin= adminService.findByAdminLoginAndAdminPassword(adminEntity.getAdminLogin(),
+						  adminEntity.getAdminPassword());
+
+				  if(Objects.isNull(admin))
+				  {
+					      return "redirect:/login";
+				  }
+				  else
+				  {
+					    return   "redirect:/admin";   
+				  }
+		  }
 }

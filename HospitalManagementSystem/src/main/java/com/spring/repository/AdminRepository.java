@@ -6,5 +6,5 @@ import com.spring.Entity.AdminEntity;
 
 public interface AdminRepository extends JpaRepository<AdminEntity, Integer>
 {
-	
+	public AdminEntity findByAdminLoginAndAdminPassword(String adminLogin, String adminPassword);
 }
