@@ -10,6 +10,8 @@ public class AdminEntity {
 	private String adminLogin;
 	@Column
 	private String adminPassword;
+	
+	
 	public int getAdminId() {
 		return adminId;
 	}
@@ -28,9 +30,11 @@ public class AdminEntity {
 	public void setAdminPassword(String adminPassword) {
 		this.adminPassword = adminPassword;
 	}
+	
+	
+	
 	public AdminEntity() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public AdminEntity(int adminId, String adminLogin, String adminPassword) {
 		super();

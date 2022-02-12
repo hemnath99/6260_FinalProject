@@ -36,15 +36,20 @@ public class HospitalController
 			return"staff";
 		}
 		
-		@GetMapping("/home2")
-		private String home2() {
-			return"home2";
+		@GetMapping("/base")
+		private String base() {
+			return"base";
 		}
 
 		@GetMapping("/patient")
 		private String patient()
 		{
 			return"patient";
+		}	
+		@GetMapping("/newfile")
+		private String newfile()
+		{
+			return"newfile";
 		}	
 
 }

@@ -1,4 +1,7 @@
 package com.spring.Entity;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -27,6 +30,10 @@ public class DoctorEntity {
 	private String doctorMail;
 	@Column
 	private String doctorPassword;
+	
+	
+	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	private List<PatientEntity>patients=new ArrayList<>();
 	
 	
 	public int getDoctorId() {

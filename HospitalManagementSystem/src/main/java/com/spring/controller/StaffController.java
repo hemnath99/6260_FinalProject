@@ -13,12 +13,12 @@ public class StaffController {
 	private StaffService staffService;
 	
 
-	@PostMapping("/nextpage")
-	public String staff (@ModelAttribute StaffEntity staff, Model model1) 
+	@PostMapping("/homes")
+	public String staff (@ModelAttribute StaffEntity staff, Model model) 
 	{		 
 		staffService.addstaff(staff);
-		model1.addAttribute(staff);
-		return"home2";
+		model.addAttribute(staff);
+		return"home";
 		
 	}
 }

@@ -2,10 +2,11 @@ package com.spring.Entity;
 import javax.persistence.*;
 
 @Entity
+
 public class PatientEntity {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int patientId;
 	@Column
 	private int RoomNo;	
@@ -27,6 +28,14 @@ public class PatientEntity {
 	private String patient_problem;
 	@Column
 	private String patient_report;
+	
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	private StaffEntity staffs;
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	private DoctorEntity doctors;
+	
 	
 	
 	public int getRoomNo() {

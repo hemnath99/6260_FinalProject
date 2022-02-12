@@ -1,4 +1,5 @@
 package com.spring.Entity;
+import java.util.*;
 import javax.persistence.*;
 
 @Entity
@@ -25,6 +26,11 @@ public class StaffEntity {
 	private String staffMail;
 	@Column
 	private String staffPassword;
+	
+	
+	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	private List<PatientEntity>patients=new ArrayList<>();
+	
 	
 	
 	public int getStaffId() {

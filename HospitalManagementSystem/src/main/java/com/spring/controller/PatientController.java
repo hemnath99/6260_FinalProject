@@ -14,14 +14,14 @@ public class PatientController {
 	@Autowired
 	private PatientService patientService;
 	
-	@PostMapping("/next")
+	@PostMapping("/homep")
 	public String next (@ModelAttribute PatientEntity patient, Model model) 
 	{
 		 
 		patientService.addpatient(patient);
 		model.addAttribute(patient);
 
-		return"home2";
+		return"home";
 		
 	}
 }
