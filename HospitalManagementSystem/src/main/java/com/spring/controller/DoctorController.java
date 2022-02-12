@@ -18,7 +18,7 @@ public class DoctorController {
 	{		
 		doctorService.adddoctor(doctor);
 		model.addAttribute(doctor);
-		return"home";
+		return"base/home";
 		
 	}
 

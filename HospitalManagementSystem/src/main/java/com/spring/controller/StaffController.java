@@ -18,7 +18,7 @@ public class StaffController {
 	{		 
 		staffService.addstaff(staff);
 		model.addAttribute(staff);
-		return"home";
+		return"base/home";
 		
 	}
 }

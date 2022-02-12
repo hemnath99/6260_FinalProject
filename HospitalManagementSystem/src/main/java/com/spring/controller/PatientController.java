@@ -21,7 +21,7 @@ public class PatientController {
 		patientService.addpatient(patient);
 		model.addAttribute(patient);
 
-		return"home";
+		return"base/home";
 		
 	}
 }
