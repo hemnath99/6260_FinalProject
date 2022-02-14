@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class PatientEntity {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int patientId;
 	@Column
 	private int RoomNo;	

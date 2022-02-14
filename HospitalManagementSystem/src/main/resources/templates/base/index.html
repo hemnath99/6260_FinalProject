@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base/base::Layout(~{::section})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 
 
 
@@ -14,14 +14,27 @@
     crossorigin="anonymous">
 
     <title>Home</title>
-    <link  rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   
 
+<style>
+.banners{
+	
+	width:100%;
+	height:100vh;
+	background-color:lightblue;
+	background-size: cover;
+	color:white;
+	
+	
+	
+}
+</style>
   </head>
   
 <body>
   
   
- <section class="bannerr d-flex justify-content-center align-items-center">
+ <section class="banners d-flex justify-content-center align-items-center">
   
     <div class="text-center"> 
 	
@@ -31,13 +44,13 @@
 				  
 			   
    
-				  <div class="card" style="width: 40rem;">				  
+				  <div class="card" style="width: 30rem;">				  
 				  <img src="/images/hms.png" class="card-img-top" alt="...">
 				  
 				  <div class="card-body">
 				  <h5 class="card-title"> Management</h5>
-				  <a href="facility" class="btn btn-primary"> Facilities </a>
-				  <a href="home" class="btn btn-primary"> Login </a>
+				  <a href="facility" class="btn btn-primary"> View Facilities </a>
+				  <a href="home" class="btn btn-primary">Management Login </a>
 				  </div>
 				  </div>
 	  

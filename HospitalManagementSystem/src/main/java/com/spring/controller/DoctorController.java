@@ -1,4 +1,5 @@
 package com.spring.controller;
+import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +20,23 @@ public class DoctorController {
 		doctorService.adddoctor(doctor);
 		model.addAttribute(doctor);
 		return"base/home";
+		
+	}
+	
+	@PostMapping("/doctorLoginCheck")
+	public String doctorlogin(@ModelAttribute DoctorEntity doctorEntity)
+	{
+		DoctorEntity doctorLogin=doctorService.findByDoctorMailAndDoctorPassword
+				(doctorEntity.getDoctorMail(),doctorEntity.getDoctorPassword());
+		
+		if(Objects.isNull(doctorLogin)) 
+		{
+			return"doctorlogin";
+		}
+		else 
+		{
+			return"doctor";
+		}
 		
 	}
 

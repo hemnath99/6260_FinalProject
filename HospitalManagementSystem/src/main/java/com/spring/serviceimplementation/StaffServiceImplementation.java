@@ -17,4 +17,12 @@ public class StaffServiceImplementation implements StaffService
 		staffRepository.save(staff);
 		
 	}
+
+	@Override
+	public StaffEntity findByStaffMailAndStaffPassword(String staffMail, String staffPassword) {		
+			 StaffEntity staffEntity=  staffRepository.findByStaffMailAndStaffPassword(staffMail, 
+					 staffPassword);
+			return staffEntity;
+		}
 }
+

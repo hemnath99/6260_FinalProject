@@ -1,4 +1,6 @@
 package com.spring.serviceimplementation;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.spring.Entity.DoctorEntity;
@@ -16,5 +18,17 @@ public class DoctorServiceImplementation implements DoctorService
 	public void adddoctor(DoctorEntity doctor) {
 		doctorRepository.save(doctor);
 		
+	}
+
+	@Override
+	public DoctorEntity findByDoctorMailAndDoctorPassword(String doctorMail, String doctorPassword) {
+		DoctorEntity doctorEntity=doctorRepository.findByDoctorMailAndDoctorPassword(doctorMail,doctorPassword);
+		return doctorEntity;
+	}
+
+	@Override
+	public List<DoctorEntity> displayAllDoctorList() {
+		
+		return   doctorRepository.findAll();
 	}
 }
