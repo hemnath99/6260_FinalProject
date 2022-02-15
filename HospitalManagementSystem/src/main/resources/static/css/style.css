@@ -1,11 +1,9 @@
 
-/* .cards */
-/* 	{ */
-/*     	  height: 100%; */
-/*  		background-image:url("hms.png"); */
-/*  		background-repeat: no-repeat;     */
-/* 		background-size:cover;				 */
-/* 	} */
+.cards
+	{
+    	text-align: center;	
+    	margin:100px;	
+	}
 
 body
 {

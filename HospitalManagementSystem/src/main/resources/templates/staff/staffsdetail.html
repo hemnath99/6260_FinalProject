@@ -14,6 +14,8 @@
    {
    	background-color:lightblue;
    	}
+   	
+   
    </style>
    
   </head>
@@ -41,7 +43,6 @@
 					<th> Email </th>
 					<th> DOB </th>
 					<th> Qualifications </th>
-					<th> Department </th>
 					<th> Contact </th>
 					<th> Address </th>
 					<th> Password </th>
@@ -50,22 +51,20 @@
 			</thead>
 			
 			<tbody>
-				<tr th:each = "doctor: ${doctor}">
-					<td th:text = "${doctor.doctorId}"></td>
-					<td th:text = "${doctor.doctorName}"></td>
-					<td th:text = "${doctor.doctorAge}"></td>
-					<td th:text = "${doctor.doctorEmail}"></td>
-					<td th:text = "${doctor.doctorDOB}"></td>
-					<td th:text = "${doctor.doctorQualification}"></td>
-					<td th:text = "${doctor.doctorDepartment}"></td>
-					<td th:text = "${doctor.doctorContact}"></td>
-					<td th:text = "${doctor.doctorAddress}"></td>
-					<td th:text = "${doctor.doctorpassword}"></td>
+				<tr th:each = "staff: ${staffform}">
+					<td th:text = "${staff.staffId}"></td>
+					<td th:text = "${staff.staffName}"></td>
+					<td th:text = "${staff.staffAge}"></td>
+					<td th:text = "${staff.staffGender}"></td>
+					<td th:text = "${staff.staffMail}"></td>
+					<td th:text = "${staff.staffDOB}"></td>
+					<td th:text = "${staff.staffQualification}"></td>
+					<td th:text = "${staff.staffContact}"></td>
+					<td th:text = "${staff.staffAddress}"></td>
+					<td th:text = "${staff.staffPassword}"></td>
 					<td>
-						  <button type="submit" class="btn btn-danger">update</button>
-						
-						  <button type="submit" class="btn btn-danger">delete</button>
-						 
+					<a  class = "btn btn-light btn-sm mb-2"> update </a>
+					<a  th:href="@{'/deletestaff'+${staff.staffId}}" class = "btn btn-light btn-sm mb-2"> delete </a>						 
 					</td>
 				</tr>
 			</tbody>

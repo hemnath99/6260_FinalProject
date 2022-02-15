@@ -20,8 +20,11 @@
   
     
 	.card{
-		margin:50px;
-		text-align:center;
+	
+		margin-top:100px;
+		margin-left:200px ;
+		margin-right:50px ;
+		text-align: center;
 	
 	
 	}
@@ -31,48 +34,82 @@
     	background: url(../images/hos.png);
     	background-size: cover;
     }
+    
+    
+.sidebar
+{
+	background-color:white;
+	width:12%;
+	height: 100%;
+	position:fixed;
+	
+}
+.sidebar a
+{
+	display:block;
+	width:100%;
+	padding: 10px 25px;
+	color:grey;
+	text-decoration: none;
+	
+}
     </style>
   </head>
   
   
   
   <body>
+  
+    <div class="sidebar">
+    <a href="home" class="item">Home</a>
+  	<a href="dashboard" class="item">DashBoard</a>
+	<a href="index" class="item">Log Out</a>
+	</div>	
 
   	<div class="card-group">	     
-   
-	  <div class="card" style="width: 10rem;">
+   	  
+	 <div class="card" style="width: 10rem;">
 	  
 	  <img src="/images/doc.jpg" class="card-img-top" alt="...">
 	  
 	  <div class="card-body">
-	  <h5 class="card-title">Doctor</h5>
-	  <a href="doctor" class="btn btn-primary"> Portal </a>
+	  <h5 class="card-title">Doctor Portal</h5>
+	
+	  <a href="doctorsdetail" class="btn btn-primary"> View Details</a>
+	   <a href="doctorform" class="btn btn-primary"> Add Doctor</a>
 	  </div>
 	  </div>
 	  
+	       
 	  
 	  <div class="card" style="width: 10rem;">
 	  
 	  <img src="/images/staff.png" class="card-img-top" alt="...">
 	  
 	  <div class="card-body">
-	  <h5 class="card-title">Staff</h5>
-	  <a href="staff" class="btn btn-primary"> Portal </a>
+	  <h5 class="card-title">Staff Portal</h5>
+	  <a href="staffsdetail" class="btn btn-primary"> View Details</a>
+	   <a href="staffform" class="btn btn-primary"> Add Staff</a>
 	  </div>
 	  </div>
 	  
+	   
 	  
 	   <div class="card" style="width: 10rem;">
 	  
 	  <img src="/images/patient.jpg" class="card-img-top" alt="...">
 	  
 	  <div class="card-body">
-	  <h5 class="card-title">Patient</h5>
-	  <a href="patient" class="btn btn-primary"> Portal </a>
+	  <h5 class="card-title">Patient Portal</h5>
+	  <a href="patientsdetail" class="btn btn-primary"> View Details </a>
 	  </div>
 	  </div>
-   </div>
-   
+	  
+	
+	  
+	    
+	  
+   </div>	
 	     
 
     <!-- Optional JavaScript; choose one of the two! -->

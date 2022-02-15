@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 public class PatientEntity {
 
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int patientId;

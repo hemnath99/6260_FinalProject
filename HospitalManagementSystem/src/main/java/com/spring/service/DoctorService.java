@@ -12,4 +12,8 @@ public interface DoctorService {
 	public DoctorEntity findByDoctorMailAndDoctorPassword(String doctorMail, String doctorPassword);
 	
 	public List<DoctorEntity> displayAllDoctorList();
+
+	public DoctorEntity findByDoctorId(int id);
+
+	public void deleteByDoctorId(int id);
 }

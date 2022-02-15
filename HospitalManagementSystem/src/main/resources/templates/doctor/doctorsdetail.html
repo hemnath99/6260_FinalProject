@@ -13,6 +13,8 @@
    {
    	background-color:lightblue;
    	}
+   	
+   
    </style>
    
    
@@ -41,7 +43,7 @@
 					<th> Age</th>
 					<th> Gender </th>
 					<th> Email </th>
-					<th> DOB </th>
+					<th style="width:200px;"> DOB </th>
 					<th> Qualifications </th>
 					<th> Department </th>
 					<th> Contact </th>
@@ -65,9 +67,8 @@
 					<td th:text = "${doctor.doctorAddress}"></td>
 					<td th:text = "${doctor.doctorPassword}"></td>
 					<td>
-					<button type="submit" class="btn btn-danger">update</button> 
-					<button></button>						
-					 <button type="submit" class="btn btn-danger">delete</button> 
+					<a  class = "btn btn-light btn-sm mb-2"> update </a>
+					<a  th:href="@{'/deletedoctor'+${doctor.doctorId}}" class = "btn btn-light btn-sm mb-2"> delete </a>						 
 					</td>
 					
 				</tr>

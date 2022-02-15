@@ -31,4 +31,16 @@ public class DoctorServiceImplementation implements DoctorService
 		
 		return   doctorRepository.findAll();
 	}
+
+	@Override
+	public DoctorEntity findByDoctorId(int id) {
+		// TODO Auto-generated method stub
+		return doctorRepository.findById(id).get();
+	}
+
+	@Override
+	public void deleteByDoctorId(int id) {
+		// TODO Auto-generated method stub
+		doctorRepository.deleteById(id);
+	}
 }
