@@ -35,13 +35,22 @@ public class DoctorController {
 		
 		if(Objects.isNull(doctorLogin)) 
 		{
-			return"doctorlogin";
+			return"doctor/doctorlogin";
 		}
 		else 
 		{
-			return"doctor";
+			return"doctor/doctor";
 		}
 		
+	}
+	
+	@GetMapping("/listd")
+	private String list(Model model) 
+	{
+		
+		List<DoctorEntity>  list =  doctorService.displayAllDoctorList();
+		model.addAttribute("doctorform", list);
+		return"doctor/listd";
 	}
 	
 	@GetMapping("/doctorsdetail")

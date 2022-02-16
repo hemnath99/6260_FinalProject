@@ -35,13 +35,22 @@ public class StaffController {
 
 			  if(Objects.isNull(staff))
 			  {
-				      return "redirect:/stafflogin";
+				      return "staff/stafflogin";
 			  }
 			  else
 			  {
-				    return   "redirect:/staff";   
+				    return   "staff/staff";   
 			  }
 	  }
+	
+	@GetMapping("/list")
+	private String list(Model model) 
+	{
+		
+		List<StaffEntity>  list =  staffService.displayAllStaffList();
+		model.addAttribute("staffform", list);
+		return"staff/list";
+	}
 	
 	@GetMapping("/staffsdetail")
 	private String stafflist(Model model) 

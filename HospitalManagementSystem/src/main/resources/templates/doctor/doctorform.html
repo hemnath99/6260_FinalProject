@@ -29,11 +29,12 @@
 
 
 			 
-			     body
+			    body
 			{
 				width:100%;
 				height:100%;
-				background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)) ,url(../images/edit.jpg) ;
+				background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)) 
+				,url(../images/reg.jpg) ;
 				background-size: cover;
 				color:white;
 			}
@@ -46,14 +47,12 @@
   <h1><b>DOCTOR FORM </b></h1>
   
 			<div class="container">
-			    <div class="row">
+			   
 			    <div  class="cols-8 offset-2">
 			    <div  class="cardType">
 		                 
-		           <form th:action="@{/homed}" method="post" >
-						  <div class="row">
-			  
-			 
+	 <form th:action="@{/homed}" method="post" >
+			  <div class="row">
 						  
 				   <div class="col-md-4">
 			   <label for="validationServer03" class="form-label">Name</label>
@@ -148,14 +147,15 @@
 			  </div>
 			  
 			   <div class="col-md-12 text-center">
-			  <button type="submit" class="btn btn-danger">Submit</button>
-			   </div>          
-			   </div>
-			  </form>
+			  <button type="submit" class="btn btn-light">Submit</button>
+			   </div>  
+			   
+			   </form>        
+			   
 			  </div>
 			  </div>
 			   </div>
-			  </div>
+			  
 			  		 
 		 
 		    

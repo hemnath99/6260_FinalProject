@@ -28,6 +28,17 @@ public class PatientController {
 		return"base/home";
 		
 	}
+	
+	@GetMapping("/listp")
+	private String list(Model model) 
+	{
+		
+		List<PatientEntity>  list =  patientService.displayAllPatientList();
+		model.addAttribute("patient", list);
+		return"patient/listp";
+	}
+
+	
 	@GetMapping("/patientsdetail")
 	private String stafflist(Model model) 
 	{
