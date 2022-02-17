@@ -18,8 +18,8 @@ public class PatientServiceImplementation implements PatientService
 
 	@Override
 	public void addpatient(PatientEntity patient) {
-		patientRepository.save(patient);
 		
+		patientRepository.save(patient);
 	}
 
 	@Override

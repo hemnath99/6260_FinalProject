@@ -53,6 +53,8 @@ public class DoctorController {
 		return"doctor/listd";
 	}
 	
+	
+	
 	@GetMapping("/doctorsdetail")
 	private String doctorlist(Model model) 
 	{
@@ -76,6 +78,5 @@ public class DoctorController {
 				model.addAttribute("doctorform", list);
 		}
 		return "doctor/doctorsdetail";
-	
 	}
 }

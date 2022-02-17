@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Responsive Registaration Form</title>
+        <link rel="stylesheet" href="style2.css">
+        <script type="text/javascript" lang="javascript" src="./responsiveRegistaration.js"></script>
+    
+    <style>
+    
+ *{
+ 	box-sizing: border-box;
+  }
+
+
+textarea{
+    width:45%;
+    padding: 12px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=radio],input[type=checkbox]
+{
+    width: 1%;
+    padding-left: 0%;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+h1{
+    font-family: Arial;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float:left;
+}
+
+.container{
+    border-radius: 5px;
+    background-color:#f2f2f2;
+    margin:20px;
+    padding: 50px;
+}
+.col-10{
+    float: left;
+    width:10%;
+    margin-top: 6px;
+}
+.col-90{
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .col-10,.col-90,input[type=submit]{
+        width: 100%;
+        margin-top: 0;
+    }
+}
+    </style>
+    
+    
+    
+    
+    </head>
+       
+    <body>
+        <h1>Appointment Form</h1>
+        <div class="container">
+          <form action="/appoint" method="post" >
+            <div class="row">
+                <div class="col-10">
+                    <label for="token-no">Token Number</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="token" name="tokenNumber" placeholder="Token">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-10">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="name"  name="patientName" placeholder="Patient Name">
+                </div>
+            </div>
+            
+            
+            <div class="row">
+             <div class="col-10">
+                    <label for="name">Age</label>
+                </div>
+                <div class="col-90">
+                 
+			    <input type="text" name="patientAge">
+			    </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-10">
+                <label for="name">Problem</label>
+                </div>
+                <div class="col-90">
+                <input type="text" id="name"  name="patientProblem" placeholder="">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Contact</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="mobile"  name="patientContact" placeholder="contact Number">
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-10">
+                    <label for="specialization">Gender</label>
+                </div>
+                <div class="col-90">
+                    <input type="checkbox" class="specialization" id="op" name="patientGender" value="Male"> Male <br/>
+                    <input type="checkbox" class="specialization" id="rp" name="patientGender" value="Female">Female<br/>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-10">
+                    <label for="dob">Select Date</label>
+                </div>
+                <div class="col-90">
+                    <input type="Date" id="date" name="fixedDate">
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-10">
+                    <label for="specialization">Select Time</label>
+                </div>
+                <div class="col-90">
+                    <input type="checkbox" class="specialization" id="op" name="fixedTime" value="10am to 12pm">10am to 12pm<br/>
+                    <input type="checkbox" class="specialization" id="rp" name="fixedTime" value="6pm to 8pm">6pm to 8pm<br/>
+                    
+                </div>
+            </div>
+            
+           
+            
+            <div class="row">
+                <div class="col-10">
+                    <label for="specialization">Type:</label>
+                </div>
+                <div class="col-90">
+                    <input type="checkbox" class="specialization" id="op" name="patientType" value="out patient">Out Patient<br/>
+                    <input type="checkbox" class="specialization" id="rp" name="patientType" value="regular patient">Regular Patient<br/>
+                    
+                </div>
+            </div>
+            
+            <div class="row">
+                <input type="submit" value="Fix Now">
+            </div>  </form>
+        </div>  
+    </body>
+</html>
