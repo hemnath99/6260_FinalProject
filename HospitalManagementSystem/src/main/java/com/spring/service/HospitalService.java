@@ -12,8 +12,12 @@ public interface HospitalService {
 
 	public List<HospitalEntity> displayAllHospitalList();
 
-	public void deleteByHospitalId(int id);
+	
 
 	public HospitalEntity findByPatientId(int id);
+
+
+
+	public void deleteByPatientId(int id);
 
 }

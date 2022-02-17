@@ -140,7 +140,7 @@ public class HospitalController
 				HospitalEntity hospitalEntity  = hospitalService.findByPatientId(id);
 				if(hospitalEntity!=null)
 				{
-					hospitalService.findByPatientId(id);
+					hospitalService.deleteByPatientId(id);
 						List<HospitalEntity>  list =  hospitalService.displayAllHospitalList();
 						model.addAttribute("appointmentform", list);
 				}

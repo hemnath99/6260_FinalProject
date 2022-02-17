@@ -30,14 +30,15 @@ public class HospitalServiceImplementation implements HospitalService
 
 
 	@Override
-	public void deleteByHospitalId(int id) {
-		hospitalRepository.deleteById(id);
+	public HospitalEntity findByPatientId(int id) {
+		return hospitalRepository.findById(id).get();
 	}
 
 
 	@Override
-	public HospitalEntity findByPatientId(int id) {
-		return hospitalRepository.findById(id).get();
+	public void deleteByPatientId(int id) {
+		hospitalRepository.deleteById(id);
+		
 	}
 
 }
