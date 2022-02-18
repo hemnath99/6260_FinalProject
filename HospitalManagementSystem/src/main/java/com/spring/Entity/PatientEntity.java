@@ -1,13 +1,14 @@
 package com.spring.Entity;
 import javax.persistence.*;
 
-@Entity
 
+@Entity
+@SequenceGenerator(name="patient", initialValue=1001, allocationSize=2000)
 public class PatientEntity {
 
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	 @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="patient")
 	private int patientId;
 	@Column
 	private int RoomNo;	

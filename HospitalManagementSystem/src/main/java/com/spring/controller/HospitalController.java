@@ -137,10 +137,10 @@ public class HospitalController
 			private String delete(@PathVariable int id, Model model) 
 			{
 				
-				HospitalEntity hospitalEntity  = hospitalService.findByPatientId(id);
+				HospitalEntity hospitalEntity  = hospitalService.findByTokenNumber(id);
 				if(hospitalEntity!=null)
 				{
-					hospitalService.deleteByPatientId(id);
+					hospitalService.deleteByTokenNumber(id);
 						List<HospitalEntity>  list =  hospitalService.displayAllHospitalList();
 						model.addAttribute("appointmentform", list);
 				}

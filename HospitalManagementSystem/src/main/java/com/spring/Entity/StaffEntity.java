@@ -3,10 +3,11 @@ import java.util.*;
 import javax.persistence.*;
 
 @Entity
+@SequenceGenerator(name="staff", initialValue=21000, allocationSize=40000)
 public class StaffEntity {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	 @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="staff")
 	private int staffId;
 	@Column
 	private String staffName;

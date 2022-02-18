@@ -41,4 +41,17 @@ public class HospitalServiceImplementation implements HospitalService
 		
 	}
 
+
+	@Override
+	public HospitalEntity findByTokenNumber(int id) {
+		return hospitalRepository.findById(id).get();
+	}
+
+
+	@Override
+	public void deleteByTokenNumber(int id) {
+		hospitalRepository.deleteById(id);
+		
+	}
+
 }

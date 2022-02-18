@@ -1,5 +1,8 @@
 package com.spring.controller;
 import java.util.*;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +27,6 @@ public class StaffController {
 		staffService.addstaff(staff);
 		model.addAttribute(staff);
 		return"base/home";
-		
 	}
 	
 	@PostMapping("/staffLoginCheck")
@@ -58,9 +60,7 @@ public class StaffController {
 		
 		List<StaffEntity>  list =  staffService.displayAllStaffList();
 		model.addAttribute("staffform", list);
-		
-		
-		return"staff/staffsdetail";
+			return"staff/staffsdetail";
 	}
 	
 	@GetMapping("/deletestaff{id}")
@@ -73,8 +73,28 @@ public class StaffController {
 			   staffService.deleteByStaffId(id);
 		}
 		return"staff/staffsdetail";
-	
 	}
+	
+	
+	@GetMapping("/updateStaff{id}")
+	private String update(@PathVariable int id, @ModelAttribute StaffEntity staff, Model model,HttpSession session) 
+	{
+		model.addAttribute(model);
+		session.setAttribute("staffId", id);
+		StaffEntity staffupdate  = staffService.findByStaffId(id);
+		
+		if(staffupdate!=null)
+		{
+			model.addAttribute("staff",staffupdate);
+			
+		}
+		else
+		{
+			model.addAttribute("staff",new StaffEntity());
+		}
+		return"staff/updateStaff";
+	}
+	
 	
 }
 

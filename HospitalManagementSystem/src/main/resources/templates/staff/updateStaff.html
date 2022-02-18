@@ -20,7 +20,7 @@
     <div class="container py-5">
         <div class="row">
           <div class="col" style="margin-top: 300px;margin-left: 70px;">
-          <h1 style="color: white">STAFF FORM</h1>
+          <h1 style="color: white">UPDATE FORM</h1>
         </div>
 
 
@@ -28,13 +28,14 @@
         <div class="card">
           <div class="card-body" >
           
-  <form action="/homes" method="post">
+  <form action="/staffsdetail{${session.staffId}}" th:object="${staff}" method="post">
                   
             
               <div class="form-group">
               <div class="col-md-11">
                     <label for="validationServer03" class="form-label">Name</label>
-				    <input type="text" name="staffName" class="form-control is-invalid" 
+				    <input type="text" name="staffName" th:value="${staff.staffName}"
+				    class="form-control is-invalid" 
 				    id="validationServer03" aria-describedby="validationServer03Feedback"
 				     required placeholder="Staff Name">
 				    <div id="validationServer03Feedback" class="invalid-feedback">
@@ -42,7 +43,7 @@
 				    
               <div class="form-group"><div class="col-md-11">
 	                <label for="validationServer03" class="form-label">Email</label>
-				    <input type="email" name="staffMail" class="form-control is-invalid" 
+				    <input type="email" name="staffMail" th:value="${staff.staffMail}" class="form-control is-invalid" 
 				    id="validationServer03" aria-describedby="validationServer03Feedback" 
 				    required placeholder="Staff Email">
 				    <div id="validationServer03Feedback" class="invalid-feedback">
@@ -51,7 +52,7 @@
               
               <div class="form-group"><div class="col-md-11">
 	                 <label for="validationServer03" class="form-label">Password</label>
-				    <input type="text" name="staffPassword" class="form-control is-invalid" 
+				    <input type="text" name="staffPassword" th:value="${staff.staffPassword}" class="form-control is-invalid" 
 				    id="validationServer03" aria-describedby="validationServer03Feedback" 
 				    required placeholder="password">
 				    <div id="validationServer03Feedback" class="invalid-feedback">
@@ -59,14 +60,14 @@
               
               <div class="form-group"><div class="col-md-11">
 			    <label for="validationServer03" class="form-label">Age</label>
-			    <input type="text" name="staffAge" class="form-control is-invalid" 
+			    <input type="text" name="staffAge" th:value="${staff.staffAge}" class="form-control is-invalid" 
 			    id="validationServer03" aria-describedby="validationServer03Feedback" required >
 			    <div id="validationServer03Feedback" class="invalid-feedback">
 			  </div></div></div>
 			    
 			  <div class="form-group"><div class="col-md-11">
 			    <label for="validationServer03" class="form-label">Date of Birth</label>
-			    <input type="date" name="staffDOB" class="form-control is-invalid" 
+			    <input type="date" name="staffDOB" th:value="${staff.staffDOB}" class="form-control is-invalid" 
 			    id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			  </div></div>
 			  
@@ -84,14 +85,14 @@
               
             <div class="form-group"><div class="col-md-11">
                 <label for="validationServer03" class="form-label">Qualification</label>
-			    <input type="text" name="staffQualification" class="form-control is-invalid" 
+			    <input type="text" name="staffQualification" th:value="${staff.staffQualification}" class="form-control is-invalid" 
 			    id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
             </div></div></div>
             
             <div class="form-group"><div class="col-md-11">
 			    <label for="validationServer03" class="form-label">contact</label>
-			    <input type="text" name="staffContact" class="form-control is-invalid" 
+			    <input type="text" name="staffContact" th:value="${staff.staffContact}" class="form-control is-invalid" 
 			    id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
 			</div></div></div>
@@ -99,7 +100,7 @@
 			
 			 <div class="form-group"><div class="col-md-11">
 			    <label for="validationServer03" class="form-label">Address</label>
-			    <input type="text" name="staffAddress" class="form-control is-invalid" 
+			    <input type="text" name="staffAddress"  th:value="${staff.staffAddress}" class="form-control is-invalid" 
 			    id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
 			 </div></div></div>

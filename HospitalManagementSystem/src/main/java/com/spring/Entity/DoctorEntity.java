@@ -4,11 +4,13 @@ import java.util.List;
 
 import javax.persistence.*;
 
+
 @Entity
+@SequenceGenerator(name="doctor", initialValue=10001, allocationSize=20000)
 public class DoctorEntity {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="doctor")
 	private int doctorId;
 	@Column
 	private String doctorName;

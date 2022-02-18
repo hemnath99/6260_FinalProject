@@ -2,7 +2,7 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
-        <title>Responsive Registaration Form</title>
+        <title>Appointment Form</title>
         <link rel="stylesheet" href="style2.css">
         <script type="text/javascript" lang="javascript" src="./responsiveRegistaration.js"></script>
     
@@ -15,7 +15,7 @@
 
 textarea{
     width:45%;
-    padding: 12px;
+    padding: 15px;
     border: 1px solid rgb(168, 166, 166);
     border-radius: 4px;
     resize: vertical;
@@ -30,31 +30,33 @@ input[type=radio],input[type=checkbox]
 }
 h1{
     font-family: Arial;
-    font-size: medium;
+   
     font-style: normal;
     font-weight: bold;
-    color: brown;
+   
     text-align: center;
-    text-decoration: underline;
+   
 }
 label{
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: rgb(0, 0, 255);
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
-    float:left;
+    float:right;
+    width:200px;
 }
 
 .container{
     border-radius: 5px;
     background-color:#f2f2f2;
-    margin:20px;
+    margin-left:150px;
+    margin-right:150px;
     padding: 50px;
 }
 .col-10{
@@ -78,6 +80,11 @@ input[type=submit] {
         margin-top: 0;
     }
 }
+
+body
+{
+	background: radial-gradient(circle at 10% 20%, rgb(0, 102, 161) 0%,   rgb(0, 68, 108) 90.1%);
+}
     </style>
     
     
@@ -86,23 +93,21 @@ input[type=submit] {
     </head>
        
     <body>
-        <h1>Appointment Form</h1>
+    <div style="background: radial-gradient(circle at 10% 20%, rgb(0, 102, 161) 0%,
+   rgb(0, 68, 108) 90.1%);" class="page-holder bg-cover">
+    <h1 style="color: white">APPOINTMENT FORM</h1></div>
+    
+       
         <div class="container">
           <form action="/appoint" method="post" >
-            <div class="row">
-                <div class="col-10">
-                    <label for="token-no">Token Number</label>
-                </div>
-                <div class="col-90">
-                    <input type="text" id="token" name="tokenNumber" placeholder="Token">
-                </div>
-            </div>
-            
+                  
+                <input type="submit" value="Fix Now">
+                
             <div class="row">
                 <div class="col-10">
                     <label for="name">Name</label>
                 </div>
-                <div class="col-90">
+                <div class="col-80">
                     <input type="text" id="name"  name="patientName" placeholder="Patient Name">
                 </div>
             </div>
@@ -183,9 +188,7 @@ input[type=submit] {
                 </div>
             </div>
             
-            <div class="row">
-                <input type="submit" value="Fix Now">
-            </div>  </form>
+              </form>
         </div>  
     </body>
 </html>

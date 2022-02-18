@@ -20,4 +20,12 @@ public interface HospitalService {
 
 	public void deleteByPatientId(int id);
 
+
+
+	public HospitalEntity findByTokenNumber(int id);
+
+
+
+	public void deleteByTokenNumber(int id);
+
 }
