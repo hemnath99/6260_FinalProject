@@ -60,7 +60,7 @@
 					<td th:text = "${patient.patientAddress}"></td>
 				
 					<td>
-					<a  class = "btn btn-primary btn-sm mb-2"> update </a>
+					<a  th:href="@{'/updatepatient'+${patient.patientId}}" class = "btn btn-primary btn-sm mb-2"> update </a>
 					<a  th:href="@{'/deletepatient'+${patient.patientId}}" class = "btn btn-primary btn-sm mb-2"> delete </a>						 
 					</td>
 				</tr>

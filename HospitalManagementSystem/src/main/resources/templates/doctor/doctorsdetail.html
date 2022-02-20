@@ -61,7 +61,7 @@
 					<td th:text = "${doctor.doctorAddress}"></td>
 					<td th:text = "${doctor.doctorPassword}"></td>
 					<td>
-					<a  class = "btn btn-primary btn-sm mb-2"> update </a>
+					<a  th:href="@{'/updateDoctor'+${doctor.doctorId}}" class = "btn btn-primary btn-sm mb-2"> update </a>
 					<a  th:href="@{'/deletedoctor'+${doctor.doctorId}}" class = "btn btn-primary btn-sm mb-2"> delete </a>						 
 					</td>
 					

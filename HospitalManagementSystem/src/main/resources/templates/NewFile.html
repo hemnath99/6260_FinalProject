@@ -102,10 +102,8 @@ body
        
         <div class="container">
           <div class="row">
-          <form action="/homep" method="post" >
-          
-	        	 
-	            <input type="submit" value="ADMIT">
+          <form action="/homes" method="post" >
+  	            <input type="submit" value="SUBMIT">
 	            
             
               <div class="row">
@@ -113,7 +111,7 @@ body
                   
                 </div>
                 <div class="col-100">
-                    <input type="text" id="name"  name="RoomNo" placeholder="Room No">
+                    <input type="text" id="name"  name="staffName" placeholder="staff Name">
                 </div>
             </div>  
             
@@ -121,7 +119,7 @@ body
                 <div class="col-15">                  
                 </div>
                 <div class="col-100">
-                    <input type="text" id="name"  name="patientName" placeholder="Patient Name">
+                    <input type="text" id="name"  name="staffMail"  placeholder="staff Mail">
                 </div>            </div>           
             
             
@@ -132,7 +130,7 @@ body
                 </div>
                 <div class="col-90">
                  
-			    <input type="text" name="patientAge" placeholder=" Patient Age">
+			    <input type="text" name="staffPassword" placeholder=" staffPassword">
 			    </div>
             </div>
               
@@ -150,16 +148,16 @@ body
               
                 </div>
                 <div class="col-90">
-                <input type="text" id="name"  name="patientProblem" placeholder="patient Problem">
+                <input type="text" id="name"  name="staffAge" placeholder="staffAge">
                 </div>
             </div>
             
               <div class="row">
                 <div class="col-15">   
-               
+               <label for="dob">Date Of Birth</label>
                 </div>
                 <div class="col-90">
-                <input type="text" id="name"  name="patientAddress" placeholder="Address">
+                <input type="datetime-local" id="date" name="staffDOB">
                 </div>
             </div>
             
@@ -168,50 +166,43 @@ body
                     <label for="specialization">Gender</label>
                 </div>
                 <div class="col-90">
-                    <input type="checkbox" class="specialization" id="op" name="patientGender" value="Male"> Male <br/>
-                    <input type="checkbox" class="specialization" id="rp" name="patientGender" value="Female">Female<br/>
+                    <input type="checkbox" class="specialization" id="op" name="staffGender" value="Male"> Male <br/>
+                    <input type="checkbox" class="specialization" id="rp" name="staffGender" value="Female">Female<br/>
                     
                 </div>
             </div>
             
+             <div class="row">
+                <div class="col-15">   
+              
+                </div>
+                <div class="col-90">
+                <input type="text" id="name"  name="staffQualification" placeholder="Qualification">
+                </div>
+            </div>
+            
             <div class="row">
-                <div class="col-10">
-                    <label for="dob">Admit Date</label>
+                <div class="col-15">   
+              
                 </div>
                 <div class="col-90">
-                    <input type="datetime-local" id="date" name="admit_date" placeholder="Admit Date">
+                <input type="text" id="name"  name="staffContact" placeholder="Contact">
                 </div>
             </div>
             
-              <div class="row">
-                <div class="col-10">
-                    <label for="dob">Discharge Date</label>
+            <div class="row">
+                <div class="col-15">   
+              
                 </div>
                 <div class="col-90">
-                    <input type="datetime-local" id="date" name="discharge_date" placeholder="Discharge Date">
+                <input type="text" id="name"  name="staffAddress" placeholder="Address">
                 </div>
             </div>
-            
-        
-          
-          
-            
-             <div class="form-group"><div class="col-md-11">
-			  		<label for="report"> Report </label>
-			    	<select class="form-control" name="patient_report" id="exampleFormControlSelect1">
-			      	      <option>  select option   </option>
-					      <option>  Cured                         </option>
-					      <option>  Died                          </option>
-					      <option>  Regular Treatment             </option>
-					      <option>  Irregular Discharge           </option>
-					      <option>  Shifted for further Treatment </option>
-				    </select>
-		      </div></div>		
-		      
+                 
 		       <div class="form-group"><div class="col-md-11">
 			   <label for="exampleFormControlFile1">Upload Photo</label>
 			    <input type="file" class="form-control-file" id="exampleFormControlFile1" 
-			    name="patientPic">
+			    name="staffPic">
 			 </div>
 			 </div>
           
