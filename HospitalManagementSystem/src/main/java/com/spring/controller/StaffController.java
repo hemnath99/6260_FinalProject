@@ -1,5 +1,7 @@
 package com.spring.controller;
 import java.util.*;
+
+import javax.persistence.Column;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -72,7 +74,7 @@ public class StaffController {
 	}
 	
 	
-	@GetMapping("/updateStaff{id}")
+	@GetMapping("/toupdateStaff{id}")
 	private String update(@PathVariable int id, @ModelAttribute StaffEntity staff, Model model,HttpSession session) 
 	{
 		model.addAttribute(model);
@@ -88,6 +90,37 @@ public class StaffController {
 			model.addAttribute("staff",new StaffEntity());
 		}
 		return"staff/updateStaff";
+	}
+	
+	@PostMapping("/updateStaff{id}")
+	private String update(@PathVariable int id, @ModelAttribute("staff") StaffEntity staff, Model model) 
+	{
+		StaffEntity staffupdate  = staffService.findByStaffId(id);
+		staffupdate.setStaffId(id);
+		StaffEntity entityObj = staffService.findByStaffId(id); 
+		if(entityObj!=null)
+		{
+			entityObj.setStaffId(id);
+			entityObj.setStaffName(staff.getStaffName());
+			entityObj.setStaffAge(staff.getStaffAge());
+			entityObj.setStaffDOB(staff.getStaffDOB());
+			entityObj.setStaffQualification(staff.getStaffQualification());
+			entityObj.setStaffContact(staff.getStaffContact());
+			entityObj.setStaffAddress(staff.getStaffAddress());
+			entityObj.setStaffMail(staff.getStaffMail());
+			entityObj.setStaffPassword(staff.getStaffPassword());
+			entityObj.setStaffPic(staff.getStaffPic());
+			
+			staffService.addstaff(entityObj);
+			
+			return "redirect:/staffsdetail";
+		
+		}
+		else
+		{
+			return "admin/admin";
+		}
+		
 	}
 	
 	

@@ -8,7 +8,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-		
+	
+	 <style>
+   
+   body
+   {
+   	background-color:silver;
+   }
+   
+   
+   </style>	
    
   </head>
  
@@ -23,7 +32,7 @@
 		
 		<div class = "row">
 			<div class = "col-lg-3">
-			<a th:href = "doctor" class = "btn btn-dark btn-sm mb-2"> Go Back </a>
+			<a th:href = "admin" class = "btn btn-dark btn-sm mb-2"> Go Back </a>
 				<a th:href = "doctorform" class = "btn btn-dark btn-sm mb-2"> Add Doctor</a>
 			</div>
 		</div>
@@ -61,7 +70,7 @@
 					<td th:text = "${doctor.doctorAddress}"></td>
 					<td th:text = "${doctor.doctorPassword}"></td>
 					<td>
-					<a  th:href="@{'/updateDoctor'+${doctor.doctorId}}" class = "btn btn-primary btn-sm mb-2"> update </a>
+					<a  th:href="@{'/toupdateDoctor'+${doctor.doctorId}}" class = "btn btn-primary btn-sm mb-2"> update </a>
 					<a  th:href="@{'/deletedoctor'+${doctor.doctorId}}" class = "btn btn-primary btn-sm mb-2"> delete </a>						 
 					</td>
 					

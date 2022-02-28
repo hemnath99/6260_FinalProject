@@ -107,7 +107,7 @@ public class HospitalController
 			{
 				return"patient/patient";
 			}	
-		
+			
 		
 			@GetMapping("/newfile")
 			private String newfile()

@@ -20,7 +20,7 @@
     <div class="container py-5">
         <div class="row">
           <div class="col" style="margin-top: 300px;margin-left: 70px;">
-          <h1 style="color: white">UPDATE FORM</h1>
+          <h1 style="color: white">STAFF UPDATE FORM</h1>
         </div>
 
 
@@ -28,7 +28,7 @@
         <div class="card">
           <div class="card-body" >
           
-  <form action="/staffsdetail{${session.staffId}}" th:object="${staff}" method="post">
+  <form th:action= "@{updateStaff{id} (id=${staff.staffId})}"th:object="${staff}" method="post">
                   
             
               <div class="form-group">

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import com.spring.Entity.DoctorEntity;
+import com.spring.Entity.StaffEntity;
 import com.spring.service.DoctorService;
 
 @Controller
@@ -80,7 +81,7 @@ public class DoctorController {
 		return "doctor/doctorsdetail";
 	}
 	
-	@GetMapping("/updateDoctor{id}")
+	@GetMapping("/toupdateDoctor{id}")
 	private String update(@PathVariable int id, 
 			@ModelAttribute DoctorEntity doctor, Model model,HttpSession session) 
 	{
@@ -99,4 +100,33 @@ public class DoctorController {
 		return"doctor/updateDoctor";
 	}
 	
+	@PostMapping("/updatesDoctor{id}")
+	private String update(@PathVariable int id, @ModelAttribute("doctor") DoctorEntity doctor, Model model)  
+	{	
+		DoctorEntity doctorupdate=doctorService.findByDoctorId(id);
+		doctorupdate.setDoctorId(id);
+		DoctorEntity entityObj = doctorService.findByDoctorId(id); 
+		if(entityObj!=null)
+		{
+			entityObj.setDoctorId(id);
+			entityObj.setDoctorName(doctor.getDoctorName());
+			entityObj.setDoctorAge(doctor.getDoctorAge());
+			entityObj.setDoctorGender(doctor.getDoctorGender());
+			entityObj.setDoctorDOB(doctor.getDoctorDOB());
+			entityObj.setDoctorContact(doctor.getDoctorContact());
+			entityObj.setDoctorQualification(doctor.getDoctorQualification());
+			entityObj.setDoctorDepartment(doctor.getDoctorDepartment());
+			entityObj.setDoctorAddress(doctor.getDoctorAddress());
+			entityObj.setDoctorMail(doctor.getDoctorMail());
+			entityObj.setDoctorPassword(doctor.getDoctorPassword());
+			
+			doctorService.adddoctor(entityObj);
+			return "redirect:/doctorsdetail";
+		
+		}
+		else
+		{
+			return "admin/admin";
+		}
+	}
 }

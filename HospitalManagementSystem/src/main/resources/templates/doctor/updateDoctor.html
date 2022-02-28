@@ -27,8 +27,9 @@
           <div class="col"style="margin-top: 10px">
         <div class="card">
           <div class="card-body" >
-          
-  <form action="/doctorsdetail{${session.doctorId}}" th:object="${doctor}" method="post">
+
+         
+  <form th:action="@{updatesDoctor{id} (id=${doctor.doctorId})}" th:object="${doctor}" method="post">
                   
             
               <div class="form-group">
@@ -86,6 +87,13 @@
             <div class="form-group"><div class="col-md-11">
                 <label for="validationServer03" class="form-label">Qualification</label>
 			    <input type="text" name="doctorQualification" th:value="${doctor.doctorQualification}" class="form-control is-invalid" 
+			    id="validationServer03" aria-describedby="validationServer03Feedback" required>
+			    <div id="validationServer03Feedback" class="invalid-feedback">
+            </div></div></div>
+            
+             <div class="form-group"><div class="col-md-11">
+                <label for="validationServer03" class="form-label">Department</label>
+			    <input type="text" name="doctorDepartment" th:value="${doctor.doctorDepartment}" class="form-control is-invalid" 
 			    id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			    <div id="validationServer03Feedback" class="invalid-feedback">
             </div></div></div>
