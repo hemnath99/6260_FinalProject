@@ -72,15 +72,15 @@
 			    id="validationServer03" aria-describedby="validationServer03Feedback" required>
 			  </div></div>
 			  
+			   <div class="form-group"><div class="col-md-11">
+			    <label for="validationServer03" class="form-label">Gender</label>
+			    <input type="text" name="doctorGender" th:value="${doctor.doctorGender}" 
+			    class="form-control is-invalid" 
+			    id="validationServer03" aria-describedby="validationServer03Feedback" required >
+			    <div id="validationServer03Feedback" class="invalid-feedback">
+			  </div></div></div>
 			  
-              <div class="form-group"><div class="col-md-11">
-                 <label for="gender"> Gender </label>
-			     <select class="form-control" name="doctorGender" id="exampleFormControlSelect1">
-			     <option>  select option   </option>
-			     <option>  Male       </option>
-			     <option>  Female     </option>
-			     </select>
-              </div></div>
+             
               
              
               
@@ -113,10 +113,12 @@
 			    <div id="validationServer03Feedback" class="invalid-feedback">
 			 </div></div></div>
 			 
-			 <div class="form-group"><div class="col-md-11">
+
+		     <div class="form-group"><div class="col-md-11">
 			    <label for="exampleFormControlFile1">Upload Photo</label>
-			    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="doctorPic">
-			  </div><br>
+			    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="doctorPic"
+			    th:value="${doctor.doctorPic}" >
+			  </div></div><br>
 			  
 			  <div class="col-md-12 text-center">
               <button  type="submit" class="btn btn-primary btn-lg btn-block" > Submit </button>

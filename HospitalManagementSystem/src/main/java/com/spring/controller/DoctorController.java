@@ -119,6 +119,7 @@ public class DoctorController {
 			entityObj.setDoctorAddress(doctor.getDoctorAddress());
 			entityObj.setDoctorMail(doctor.getDoctorMail());
 			entityObj.setDoctorPassword(doctor.getDoctorPassword());
+			entityObj.setDoctorPic(doctor.getDoctorPic());
 			
 			doctorService.adddoctor(entityObj);
 			return "redirect:/doctorsdetail";
